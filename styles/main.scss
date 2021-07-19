@@ -1,19 +1,7 @@
 
-$breakpoint-sm: 640px;
-$breakpoint-md: 960px;
-$breakpoint-lg: 1200px;
-$breakpoint-xl: 1600px;
-
-$padding-sm: 12px;
-$padding-md: 24px;
-$padding-lg: 48px;
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto';
 }
 
 .container {
@@ -24,26 +12,23 @@ body {
 
   align-items: center;
 
-  background-color: brown;
-
-  padding: 0 $padding-sm;
-
-  @media screen and (min-width: $breakpoint-sm) {
-    padding: 0 $padding-md;
-  }
-
-  @media screen and (min-width: $breakpoint-lg) {
-    padding: 0 $padding-lg;
-  }
+  padding: 0 1em;
 }
 
 .hero-section {
-  display: flex;
-  flex-wrap: nowrap;
-
-  align-items: center;
-
   width: 100%;
-  //max-width: 900px;
-  background-color: aqua;
+  height: auto;
+  max-width: $breakpoint-lg;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+
+  p {
+    line-height: 1.2em;
+    margin-top: 1em;
+  }
 }

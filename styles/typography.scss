@@ -1,0 +1,31 @@
+:root {
+  --base-font-size: 12px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    --base-font-size: 16px;
+  }
+
+
+}
+
+html {
+  font-family: 'PT Sans', sans-serif;
+  font-size: var(--base-font-size);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Arsenal', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 3rem;
+}

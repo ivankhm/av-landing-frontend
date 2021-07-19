@@ -1,4 +1,7 @@
-
+::selection {
+  background: $primary-color;
+  color: white;
+}
 
 * {
   box-sizing: border-box;
@@ -13,6 +16,8 @@
   align-items: center;
 
   padding: 0 1em;
+  background-image: url("https://demo.yootheme.com/demo/summit/images/training-hero-bg.svg");
+  background-repeat: no-repeat;
 }
 
 .hero-section {
@@ -20,15 +25,49 @@
   height: auto;
   max-width: $breakpoint-lg;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-
   margin-top: 4rem;
   margin-bottom: 5rem;
 
-  p {
-    line-height: 1.2em;
-    margin-top: 1em;
+  display: grid;
+  grid-template-rows: auto;
+
+  grid-template-columns: 100%;
+
+  .hero-decoration {
+    display: none;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    grid-template-columns: 1fr 1fr;
+
+    .hero-decoration {
+      display: block;
+    }
+  }
+
+  .hero-content {
+    h1 {
+      text-align: center;
+    }
+
+    p {
+
+      line-height: 1.3em;
+      text-align: center;
+
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+
+
+
+
   }
 }

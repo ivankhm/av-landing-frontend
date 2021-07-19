@@ -1,7 +1,7 @@
 :root {
-  --base-font-size: 12px;
+  --base-font-size: 14px;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: $breakpoint-sm) {
     --base-font-size: 16px;
   }
 
@@ -13,7 +13,11 @@ html {
   font-size: var(--base-font-size);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Arsenal', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -22,10 +26,26 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 4rem;
+  }
+
   line-height: 1em;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 20%)
+  }
 }

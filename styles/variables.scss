@@ -6,3 +6,9 @@ $breakpoint-xl: 1600px;
 $padding-sm: 12px;
 $padding-md: 24px;
 $padding-lg: 48px;
+
+$primary-color: #2877EC;
+$secondary-color: adjust-hue($primary-color, 45);
+
+$white: white;
+$black: black;

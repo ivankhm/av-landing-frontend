@@ -16,15 +16,16 @@
   align-items: center;
 
   padding: 0 1em;
-  background-image: url("https://demo.yootheme.com/demo/summit/images/training-hero-bg.svg");
   background-repeat: no-repeat;
+
+  section {
+    width: 100%;
+    height: auto;
+    max-width: $breakpoint-lg;
+  }
 }
 
 .hero-section {
-  width: 100%;
-  height: auto;
-  max-width: $breakpoint-lg;
-
   margin-top: 4rem;
   margin-bottom: 5rem;
 
@@ -55,7 +56,7 @@
       line-height: 1.3em;
       text-align: center;
 
-      margin-top: 1em;
+      margin-top: 1rem;
     }
 
     @media screen and (min-width: $breakpoint-sm) {
@@ -65,9 +66,23 @@
         text-align: left;
       }
     }
+  }
+}
 
+.products-section {
+  .products-list {
+    display: grid;
 
+    .product {
+      margin-top: 1.5rem;
+      display: grid;
 
-
+      grid-template-columns: 1fr 1fr;
+      .product-description {
+        ol {
+          list-style: inside decimal;
+        }
+      }
+    }
   }
 }

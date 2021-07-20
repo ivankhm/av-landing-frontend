@@ -18,9 +18,9 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Arsenal', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
 
   text-transform: uppercase;
 }
@@ -38,6 +38,20 @@ h2 {
   font-size: 2rem;
   @media screen and (min-width: $breakpoint-sm) {
     font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 0.8rem;
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 1.6rem;
   }
 }
 

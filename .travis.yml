@@ -1,5 +1,4 @@
 language: node_js
-base: av-landing-frontend
 node_js:
   - lts/*
 install:

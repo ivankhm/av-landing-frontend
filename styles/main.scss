@@ -16,26 +16,34 @@
   align-items: center;
 
   padding: 0 1em;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, $white 30%, rgba($white, 0)), url('/images/bg-blueprint.svg') no-repeat -50%/120%, url('/images/bg-grid.svg');
+  background-attachment: fixed;
 
   section {
     width: 100%;
-    height: auto;
     max-width: $breakpoint-lg;
   }
 }
 
 .hero-section {
-  margin-top: 4rem;
   margin-bottom: 5rem;
 
   display: grid;
   grid-template-rows: auto;
-
   grid-template-columns: 100%;
+
+  align-items: center;
+
+
+  height: 100vh;
+
 
   .hero-decoration {
     display: none;
+
+    img {
+      width: 100%;
+    }
   }
 
   @media screen and (min-width: $breakpoint-sm) {
@@ -70,19 +78,52 @@
 }
 
 .products-section {
-  .products-list {
-    display: grid;
+  position: relative;
+  z-index: 2;
+  align-self: left;
 
-    .product {
-      margin-top: 1.5rem;
+  &::after {
+    content: ' ';
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(to bottom, rgba($white, 0), $white  15%) no-repeat;
+  }
+  display: flex;
+
+  width: calc(100vw - 1em) !important;
+  max-width: none !important;
+
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+
+
+  .products-wrapper {
+    
+    
+    .products-list {
       display: grid;
-
-      grid-template-columns: 1fr 1fr;
-      .product-description {
-        ol {
-          list-style: inside decimal;
+  
+      .product {
+        margin-top: 1.5rem;
+        display: grid;
+  
+        grid-template-columns: 1fr 1fr;
+  
+        .product-description {
+          ol {
+            list-style: inside decimal;
+          }
         }
       }
     }
   }
+
+  
 }

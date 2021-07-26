@@ -8,7 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=PT+Sans&display=swap&text=ШКОЛАГРАФИКИАЛЕКСАНДРАВАСИЛЬЕВИЧА"
+    as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=PT+Sans&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=PT+Sans&display=swap">
+  </noscript>
   <title>Школа графики Александра Васильевича</title>
 </head>
 
@@ -26,7 +33,8 @@
       </p>
     </div>
     <div class="hero-decoration">
-      <img src="/images/bg-humans.svg" alt="Иллюстрация с обучением">
+      <img class="large-image" src="/images/bg-humans.svg" alt="Иллюстрация с обучением два человека">
+      <img class="small-image" src="/images/bg-av-solo.svg" alt="Иллюстрация с обучением один человек">
     </div>
   </section>
   <section class="products-section">

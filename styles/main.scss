@@ -17,6 +17,18 @@
   }
 }
 
+@keyframes fadeInToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -46,7 +58,7 @@
     background-attachment: fixed;
 
 
-    animation: appear 1s linear 0.5s;
+    animation: appear 1s ease-in 0.5s;
     animation-fill-mode: both;
 
   }
@@ -56,7 +68,7 @@
     background: linear-gradient(to right, $white 30%, rgba($white, 0)), url('/images/bg-grid.svg');
     background-attachment: fixed;
 
-    animation: appear 0.5s linear;
+    animation: appear 0.5s ease-in;
   }
 
 
@@ -68,6 +80,8 @@
 }
 
 .hero-section {
+
+
   margin-bottom: 5rem;
 
   display: grid;
@@ -86,8 +100,28 @@
     img {
       width: 100%;
       animation: appear 0.5s linear;
+    }
+
+    .large-image {
+      display: none;
+
+      @media screen and (min-width: $breakpoint-md) {
+
+        display: block;
+      }
+    }
+
+    .small-image {
+      display: block;
+      max-height: 425.7px;
+
+      @media screen and (min-width: $breakpoint-md) {
+
+        display: none;
+      }
 
     }
+
   }
 
   @media screen and (min-width: $breakpoint-sm) {
@@ -99,11 +133,14 @@
   }
 
   .hero-content {
+
     h1 {
       text-align: center;
+      animation: fadeInToTop 0.5s linear 0.1s both;
     }
 
     p {
+      animation: fadeInToTop 0.5s linear 0.5s both;
 
       line-height: 1.3em;
       text-align: center;
@@ -150,7 +187,7 @@
 
 
   .products-wrapper {
-
+    max-width: $breakpoint-lg;
 
     .products-list {
       display: grid;

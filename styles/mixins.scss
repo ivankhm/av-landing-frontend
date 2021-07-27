@@ -1,6 +1,6 @@
 @mixin adaptive-max-width {
   width: 100%;
-  max-width: auto;
+  max-width: unset;
 
   @media screen and (min-width: $breakpoint-sm) {
     max-width: $breakpoint-sm;

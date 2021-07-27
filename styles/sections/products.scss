@@ -10,11 +10,14 @@
 
   .products-list {
     display: grid;
+    
 
     .product {
       margin-top: 1.5rem;
       display: grid;
 
+      gap: $grid-gap;
+      
       grid-template-columns: 1fr;
 
       @media screen and (min-width: $breakpoint-sm) {

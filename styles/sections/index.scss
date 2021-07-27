@@ -1,18 +1,8 @@
 .solid-background-section {
   background: var(--section-color, $white);
-  max-width: none !important;
-
-  width: 100% !important;
   
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
 
-  .content-wrapper {
-    height: 100%;
-    @include adaptive-max-width;
-  }
+  
 }
 
 

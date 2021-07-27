@@ -1,9 +1,12 @@
 .products-section {
-  padding-top: 3rem;
-
-  //padding-bottom: 3rem;
-
   --section-color: #{$lightest-grey};
+  
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+  .products-subheader {
+    margin-top: 0.5rem;
+  }
 
   .products-list {
     display: grid;
@@ -18,9 +21,9 @@
         grid-template-columns: 1fr 2fr;
       }
 
-      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
 
-      border-bottom: 1px solid $primary-color;
+      border-top: 1px solid $primary-color;
 
       .product-description {
         h4 {

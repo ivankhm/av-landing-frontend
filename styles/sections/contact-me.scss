@@ -1,38 +1,40 @@
 .contact-me-section {
   padding-top: 2rem;
   padding-bottom: 2rem;
-
+  height: 50vh;
 
   h2 {
     margin-bottom: 2rem;
   }
 
   .contact-me-content {
-
+    height: 100%;
     display: grid;
 
-    grid-template-areas:
-      'contacts'
-      'description'
-      'about-me';
 
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    justify-content: center;
 
 
     @media screen and (min-width: $breakpoint-sm) {
       grid-template-columns: 1fr 2fr;
 
-      grid-template-areas:
-        'about-me contacts'
-        'description description';
     }
 
     .about-me {
-      grid-area: about-me;
 
       figure {
+        height: 100%;
+
         margin-bottom: 1rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        align-items: center;
+        justify-content: center;
 
         figcaption {
           font-size: 1.5rem;
@@ -56,11 +58,13 @@
     }
 
     .contacts {
-      grid-area: contacts;
-
+      
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+
+      align-items: left;
+      justify-content: center;
 
       >p {
         margin-bottom: 1rem;
@@ -68,9 +72,6 @@
     }
 
 
-    >p {
-      grid-area: description;
-    }
 
     a {
       font-size: 1.5rem;

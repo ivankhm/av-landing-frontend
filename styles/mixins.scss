@@ -1,0 +1,20 @@
+@mixin adaptive-max-width {
+  width: 100%;
+  max-width: auto;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-sm;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: $breakpoint-md;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    max-width: $breakpoint-lg;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    max-width: $breakpoint-xl;
+  }
+}

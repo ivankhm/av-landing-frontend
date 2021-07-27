@@ -7,49 +7,6 @@
   box-sizing: border-box;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInToTop {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@mixin adaptive-max-width {
-  width: 100%;
-  max-width: auto;
-
-  @media screen and (min-width: $breakpoint-sm) {
-    max-width: $breakpoint-sm;
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    max-width: $breakpoint-md;
-  }
-
-  @media screen and (min-width: $breakpoint-lg) {
-    max-width: $breakpoint-lg;
-  }
-
-  @media screen and (min-width: $breakpoint-xl) {
-    max-width: $breakpoint-xl;
-  }
-}
-
 .container {
   display: flex;
   width: 100%;
@@ -58,7 +15,7 @@
 
   align-items: center;
 
-  padding: 0 1em;
+  
 
   position: relative;
   z-index: 1;
@@ -93,153 +50,9 @@
   }
 
   section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     @include adaptive-max-width;
   }
-}
-
-.hero-section {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 100%;
-
-  align-items: center;
-
-  height: 50vh;
-  margin-bottom: 3rem;
-
-  @media screen and (min-width: $breakpoint-xs) {
-    height: 100vh;
-    margin-bottom: 0;
-
-  }
-
-
-
-  .hero-decoration {
-    display: none;
-
-    img {
-      width: 100%;
-      animation: appear 0.5s linear;
-    }
-
-    .large-image {
-      display: none;
-
-      @media screen and (min-width: $breakpoint-lg) {
-        display: block;
-      }
-    }
-
-    .small-image {
-      display: block;
-      max-height: 425.7px;
-
-      @media screen and (min-width: $breakpoint-lg) {
-        display: none;
-      }
-    }
-
-  }
-
-  @media screen and (min-width: $breakpoint-sm) {
-    grid-template-columns: 1fr 1fr;
-
-    .hero-decoration {
-      display: block;
-    }
-  }
-
-  .hero-content {
-
-    h1 {
-      animation: fadeInToTop 0.5s linear 0.1s both;
-    }
-
-    p {
-      animation: fadeInToTop 0.5s linear 0.5s both;
-
-      line-height: 1.3em;
-
-      margin-top: 1rem;
-    }
-
-    @media screen and (min-width: $breakpoint-sm) {
-
-      h1,
-      p {
-        text-align: left;
-      }
-    }
-  }
-}
-
-.products-section {
-  position: relative;
-  z-index: 2;
-
-  margin-bottom: 3rem;
-
-  &::after {
-    content: ' ';
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-
-    width: 100%;
-    height: 100%;
-
-    background: $white; // linear-gradient(to bottom, rgba($white, 0), $white 15%) no-repeat;
-  }
-
-  display: flex;
-
-  width: calc(100vw - 1em) !important;
-  max-width: none !important;
-
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-
-
-  .products-wrapper {
-    @include adaptive-max-width;
-
-    .products-list {
-      display: grid;
-
-      .product {
-        margin-top: 1.5rem;
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        @media screen and (min-width: $breakpoint-sm) {
-
-          grid-template-columns: 1fr 1fr;
-        }
-
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid $light-grey;
-
-        .product-description {
-          h4 {
-            margin-bottom: 1rem;
-          }
-
-          ol {
-            list-style: inside decimal;
-
-            li {
-              margin-bottom: 0.5rem;
-
-            }
-          }
-        }
-      }
-    }
-  }
-
-
 }

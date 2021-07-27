@@ -1,0 +1,46 @@
+.products-section {
+  padding-top: 3rem;
+
+  //padding-bottom: 3rem;
+
+  --section-color: #{$lightest-grey};
+
+  .products-list {
+    display: grid;
+
+    .product {
+      margin-top: 1.5rem;
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width: $breakpoint-sm) {
+
+        grid-template-columns: 1fr 1fr;
+      }
+
+      padding-bottom: 1.5rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $primary-color;
+
+      }
+
+      .product-description {
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        ol {
+          list-style: inside decimal;
+
+          li {
+            margin-bottom: 0.5rem;
+
+          }
+        }
+      }
+    }
+  }
+
+}

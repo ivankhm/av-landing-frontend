@@ -1,0 +1,38 @@
+
+
+.contact-me-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .contact-me-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    a {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      @media screen and (min-width: $breakpoint-sm) {
+        font-size: 2rem;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        font-size: 3rem;
+      }
+    }
+
+
+  }
+}

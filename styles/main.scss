@@ -29,6 +29,27 @@
   }
 }
 
+@mixin adaptive-max-width {
+  width: 100%;
+  max-width: auto;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-sm;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: $breakpoint-md;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    max-width: $breakpoint-lg;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    max-width: $breakpoint-xl;
+  }
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -71,27 +92,27 @@
     animation: appear 0.5s ease-in;
   }
 
-
-
   section {
-    width: 100%;
-    max-width: $breakpoint-lg;
+    @include adaptive-max-width;
   }
 }
 
 .hero-section {
-
-
-  margin-bottom: 5rem;
-
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
 
   align-items: center;
 
+  height: 50vh;
+  margin-bottom: 3rem;
 
-  height: 100vh;
+  @media screen and (min-width: $breakpoint-xs) {
+    height: 100vh;
+    margin-bottom: 0;
+
+  }
+
 
 
   .hero-decoration {
@@ -105,8 +126,7 @@
     .large-image {
       display: none;
 
-      @media screen and (min-width: $breakpoint-md) {
-
+      @media screen and (min-width: $breakpoint-lg) {
         display: block;
       }
     }
@@ -115,11 +135,9 @@
       display: block;
       max-height: 425.7px;
 
-      @media screen and (min-width: $breakpoint-md) {
-
+      @media screen and (min-width: $breakpoint-lg) {
         display: none;
       }
-
     }
 
   }
@@ -135,7 +153,6 @@
   .hero-content {
 
     h1 {
-      text-align: center;
       animation: fadeInToTop 0.5s linear 0.1s both;
     }
 
@@ -143,7 +160,6 @@
       animation: fadeInToTop 0.5s linear 0.5s both;
 
       line-height: 1.3em;
-      text-align: center;
 
       margin-top: 1rem;
     }
@@ -161,7 +177,8 @@
 .products-section {
   position: relative;
   z-index: 2;
-  align-self: left;
+
+  margin-bottom: 3rem;
 
   &::after {
     content: ' ';
@@ -173,7 +190,7 @@
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to bottom, rgba($white, 0), $white 15%) no-repeat;
+    background: $white; // linear-gradient(to bottom, rgba($white, 0), $white 15%) no-repeat;
   }
 
   display: flex;
@@ -187,7 +204,7 @@
 
 
   .products-wrapper {
-    max-width: $breakpoint-lg;
+    @include adaptive-max-width;
 
     .products-list {
       display: grid;
@@ -196,11 +213,28 @@
         margin-top: 1.5rem;
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: $breakpoint-sm) {
+
+          grid-template-columns: 1fr 1fr;
+        }
+
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $light-grey;
 
         .product-description {
+          h4 {
+            margin-bottom: 1rem;
+          }
+
           ol {
             list-style: inside decimal;
+
+            li {
+              margin-bottom: 0.5rem;
+
+            }
           }
         }
       }

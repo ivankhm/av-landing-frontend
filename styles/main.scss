@@ -32,10 +32,16 @@
 
   &::after {
     z-index: -1;
-    background: linear-gradient(to right, $white 30%, rgba($white, 0)), url('/images/bg-blueprint.svg') no-repeat -50%/120%;
-    background-attachment: fixed;
-
-
+    
+   background: linear-gradient(to right, $white 50%, rgba($white, 0)), url('/images/bg-blueprint.png') no-repeat center/140%;
+   background-attachment: fixed;
+    
+   @media screen and (min-width: $breakpoint-sm) {
+      background: linear-gradient(to right, $white 30%, rgba($white, 0)), url('/images/bg-blueprint.png') no-repeat right/50%;
+      background-attachment: fixed;
+    }
+    
+    
     animation: appear 1s ease-in 0.5s;
     animation-fill-mode: both;
 

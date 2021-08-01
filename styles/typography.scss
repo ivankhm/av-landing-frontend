@@ -106,6 +106,10 @@ a {
   &:hover::after,
   &:focus::after {
     transform: translate3d(0, 0, 0);
-
   }
+}
+
+:focus-visible, a:focus-visible {
+  outline: 0.2rem solid $primary-color;
+  outline-offset: 0.2rem;
 }

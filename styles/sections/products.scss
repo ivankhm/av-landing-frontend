@@ -28,6 +28,22 @@
 
       border-top: 1px solid $primary-color;
 
+      .tag-powerpoint {
+        background: #CA4C28;
+        color: $white;
+      }
+
+      .tag-video {
+        background: #2899e4;
+        color: $white;
+      }
+
+      .tag {
+        padding: 0.5rem;
+        width: max-content;
+        margin-top: 0.5rem;
+      }
+
       .product-description {
         h4 {
           margin-bottom: 1rem;

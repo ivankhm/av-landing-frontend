@@ -33,7 +33,7 @@
   &::after {
     z-index: -1;
     
-   background: linear-gradient(to right, $white 50%, rgba($white, 0)), url('/images/bg-blueprint.png') no-repeat center/140%;
+   background: linear-gradient(to right, $white 50%, rgba($white, 0));
    background-attachment: fixed;
     
    @media screen and (min-width: $breakpoint-sm) {
